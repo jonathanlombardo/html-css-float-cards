@@ -45,7 +45,7 @@ i {
   --main-color: #e53170;
   --cards-bg-color: #0f0e17;
 
-  --grid-padding: 5px;
+  --grid-padding: 20px;
   --container-padding: calc(var(--grid-padding) + 0px);
 }
 
@@ -87,7 +87,7 @@ i {
 }
 
 [class|="col"] {
-  padding: calc(2 * var(--grid-padding)) var(--grid-padding);
+  padding: calc(1.5 * var(--grid-padding)) var(--grid-padding);
 }
 
 /* -- UTIL PROPS */
