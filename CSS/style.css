@@ -4,12 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Fredoka", sans-serif;
 }
 
 img {
   display: block;
-  max-width: fit-content;
+  max-width: 100%;
 }
 
 a:link,
@@ -42,16 +42,17 @@ i {
   --li-margin: 1em; /* margini lista FontAwesome */
   --li-width: 1.5em; /* markerwidth lista FontAwesome */
 
-  --main-color: rgba(255, 0, 0, 0.236);
+  --main-color: #e53170;
+  --cards-bg-color: #0f0e17;
 
-  --grid-padding: 1rem;
+  --grid-padding: 5px;
   --container-padding: calc(var(--grid-padding) + 0px);
 }
 
 /* -- GRID PROPS */
 
 .container {
-  max-width: 1180px;
+  max-width: calc(1330px + 2 * var(--container-padding));
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   margin-left: auto;
@@ -78,9 +79,15 @@ i {
 .col-3-4 {
   width: 75%;
 }
+.col-70 {
+  width: 70%;
+}
+.col-30 {
+  width: 30%;
+}
 
 [class|="col"] {
-  padding: var(--grid-padding);
+  padding: calc(2 * var(--grid-padding)) var(--grid-padding);
 }
 
 /* -- UTIL PROPS */
@@ -168,3 +175,40 @@ i {
 } */
 
 /* ---------------------------------------- */
+
+/* #HEADER */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--main-color);
+  text-align: center;
+  padding: 40px;
+}
+
+header p {
+  font-size: 1.3rem;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* #MAIN */
+
+.card {
+  background-color: var(--cards-bg-color);
+  color: white;
+}
+
+.card .pic {
+  width: 30%;
+}
+
+.card .desc {
+  width: 70%;
+}
+
+.card h2,
+.card h3 {
+  padding-top: 13px;
+  padding-left: 10px;
+}
