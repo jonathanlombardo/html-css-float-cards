@@ -9,7 +9,7 @@
 
 img {
   display: block;
-  max-width: 100%;
+  max-height: 100%;
 }
 
 a:link,
@@ -52,7 +52,7 @@ i {
 /* -- GRID PROPS */
 
 .container {
-  max-width: calc(1330px + 2 * var(--container-padding));
+  max-width: calc(1300px + 2 * var(--container-padding));
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   margin-left: auto;
@@ -86,7 +86,7 @@ i {
   width: 30%;
 }
 
-[class|="col"] {
+[class*="col-"] {
   padding: calc(1.5 * var(--grid-padding)) var(--grid-padding);
 }
 
@@ -194,21 +194,25 @@ header p {
 
 /* #MAIN */
 
+.card-container {
+  min-width: 440px;
+}
+
 .card {
   background-color: var(--cards-bg-color);
   color: white;
 }
 
 .card .pic {
-  width: 30%;
-}
-
-.card .desc {
-  width: 70%;
+  height: 115px;
 }
 
 .card h2,
 .card h3 {
-  padding-top: 13px;
-  padding-left: 10px;
+  padding-top: 9px;
+  padding-left: 9px;
+}
+
+.card h3 {
+  font-weight: 100;
 }
